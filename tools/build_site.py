@@ -19,6 +19,12 @@ TODAY = "2026-06-28"
 BOOK_TITLE = "De FAK a Fluent"
 AUTHOR = "Javier Sanz"
 PRONUNCIATION_GUIDE_PDF = "/downloads/guia-pronunciacion-ingles-espanoles.pdf"
+PLAUSIBLE_SNIPPET = """    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-4T40IxASAXWTjmNAWDMvd.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>"""
 
 
 def slugify(value: str) -> str:
@@ -75,7 +81,7 @@ def page_head(
     <script type="application/ld+json">
     {json_ld(schema)}
     </script>
-    <script defer data-domain="librodeingles.com" src="https://plausible.io/js/script.manual.outbound-links.js"></script>
+{PLAUSIBLE_SNIPPET}
 </head>"""
 
 
